@@ -1,0 +1,4 @@
+//配置所有子模块
+rootProject.name = 'kxw-spring'
+include 'kxw-spring-boot'
+include 'kxw-spring-cloud'

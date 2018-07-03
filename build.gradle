@@ -1,0 +1,43 @@
+//所有项目的公共配置
+allprojects {
+    group = 'org.kxw.spring'
+    version = '1.0.0-SNAPSHOT'
+    //引用的插件
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    //下载jar包的仓库
+    repositories {
+        mavenLocal()
+        jcenter()
+        mavenCentral()
+    }
+
+    //JDK编译版本
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    //编译代码的编码格式
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+
+    //公共的依赖
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
+
+//子项目的公共配置
+subprojects {
+
+}
+
+//抽出几个项目的公共配置
+configure(subprojects.findAll { it.name == 'kxw-spring-boot' || it.name == 'kxw-spring-cloud' }) {
+
+}
+
+
+
+
