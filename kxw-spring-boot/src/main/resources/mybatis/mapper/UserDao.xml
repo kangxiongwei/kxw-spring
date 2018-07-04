@@ -9,4 +9,8 @@
         where name = #{name}
     </select>
 
+    <insert id="saveUser" keyProperty="user.id">
+        insert into user (name, password, icon) values (#{user.name}, #{user.password}, #{user.icon})
+    </insert>
+
 </mapper>

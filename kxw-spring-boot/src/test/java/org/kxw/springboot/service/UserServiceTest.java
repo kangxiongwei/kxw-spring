@@ -1,4 +1,4 @@
-package org.kxw.springboot.dao;
+package org.kxw.springboot.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,14 +9,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.annotation.Resource;
 
 /**
- * Create by kangxiongwei on 2018/7/4 10:14.
+ * Create by kangxiongwei on 2018/7/4 16:25.
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class UserDaoTest {
+public class UserServiceTest {
 
     @Resource
-    private UserDao userDao;
+    private UserService userService;
 
     @Test
     public void testSaveUser() {
@@ -24,13 +24,6 @@ public class UserDaoTest {
         user.setName("lisi");
         user.setPassword("xxxxxx");
         user.setIcon("sdffdsfdsdffdfd");
-        this.userDao.saveUser(user);
-        System.out.println(user);
-    }
-
-    @Test
-    public void testGetUser() {
-        UserEntity user = this.userDao.getUser("zhangsan");
-        System.out.println(user);
+        this.userService.saveUser(user);
     }
 }

@@ -3,6 +3,7 @@ package org.kxw.springboot.service;
 import org.kxw.springboot.dao.UserDao;
 import org.kxw.springboot.entity.UserEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -20,8 +21,9 @@ public class UserService {
      *
      * @param user
      */
+    @Transactional
     public void saveUser(UserEntity user) {
-        //this.userDao.saveUser(user);
+        this.userDao.saveUser(user);
     }
 
 
