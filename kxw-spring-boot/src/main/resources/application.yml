@@ -14,7 +14,10 @@ spring:
 mybatis:
   #mybatis的配置文件位置
   config-location: classpath:mybatis/mybatis-config.xml
+  #检查mybatis配置文件
+  check-config-location: true
   #mapper的配置文件位置
   mapper-locations: classpath:mybatis/mapper/*.xml
   #对象的别名位置
   type-aliases-package: org.kxw.springboot.entity
+  #也可以用configuration配置mybatis-config.xml的内容，和config-location只能有一个
