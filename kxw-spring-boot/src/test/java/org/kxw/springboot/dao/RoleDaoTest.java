@@ -23,7 +23,7 @@ public class RoleDaoTest {
         RoleEntity role = new RoleEntity();
         role.setName("管理员");
         role.setRole("admin");
-        this.roleDao.saveRole(role);
+        this.roleDao.save(role);
         System.out.println(role);
     }
 }

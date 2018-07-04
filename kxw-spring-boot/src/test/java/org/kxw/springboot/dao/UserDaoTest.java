@@ -18,14 +18,14 @@ public class UserDaoTest {
     @Resource
     private UserDao userDao;
 
-    @Test
+   /* @Test
     public void testSaveUser() {
         UserEntity user = new UserEntity();
         user.setName("zhangsan");
         user.setPassword("xxxxxx");
         user.setIcon("sdffdsfdsdffdfd");
         userDao.saveUser(user);
-    }
+    }*/
 
     @Test
     public void testGetUser() {

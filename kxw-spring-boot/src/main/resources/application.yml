@@ -18,7 +18,3 @@ mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
   #对象的别名位置
   type-aliases-package: org.kxw.springboot.entity
-  #其他配置
-  configuration:
-    map-underscore-to-camel-case: true
-
