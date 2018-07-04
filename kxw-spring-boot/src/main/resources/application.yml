@@ -1,0 +1,25 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /spring
+
+#springboot的相关配置
+spring:
+  profiles:
+    active: dev
+  config:
+    location: /config
+  datasource:
+    url: jdbc:mysql://localhost:3306/kxw_spring?characterEncoding=UTF-8&useSSL=true
+    username: root
+    password: kxw672015
+    driver-class-name: com.mysql.jdbc.Driver
+#mybatis的相关配置
+mybatis:
+  #mybatis的配置文件位置
+  config-location: /mybatis/mybatis-config.xml
+  #mapper的配置文件位置
+  mapper-locations: /mybatis/mapper
+  #对象的别名位置
+  type-aliases-package: org.kxw.springboot.entity
+
