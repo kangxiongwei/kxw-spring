@@ -3,10 +3,12 @@ package org.kxw.springboot.dao;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.kxw.springboot.entity.UserEntity;
+import org.springframework.stereotype.Repository;
 
 /**
  * Create by kangxiongwei on 2018/7/4 上午8:44
  */
+@Repository
 public interface UserDao {
 
     @Select("select * from user where name = #{name}")

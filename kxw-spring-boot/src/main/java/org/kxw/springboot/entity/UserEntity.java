@@ -5,9 +5,18 @@ package org.kxw.springboot.entity;
  */
 public class UserEntity {
 
+    private Integer id;
     private String name;
     private String password;
     private String icon;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -36,7 +45,8 @@ public class UserEntity {
     @Override
     public String toString() {
         return "UserEntity{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", icon='" + icon + '\'' +
                 '}';

@@ -9,17 +9,16 @@ spring:
     active: dev
   config:
     location: /config
-  datasource:
-    url: jdbc:mysql://localhost:3306/kxw_spring?characterEncoding=UTF-8&useSSL=true
-    username: root
-    password: kxw672015
-    driver-class-name: com.mysql.jdbc.Driver
+
 #mybatis的相关配置
 mybatis:
   #mybatis的配置文件位置
-  config-location: /mybatis/mybatis-config.xml
+  config-location: classpath:mybatis/mybatis-config.xml
   #mapper的配置文件位置
-  mapper-locations: /mybatis/mapper
+  mapper-locations: classpath:mybatis/mapper/*.xml
   #对象的别名位置
   type-aliases-package: org.kxw.springboot.entity
+  #其他配置
+  configuration:
+    map-underscore-to-camel-case: true
 
