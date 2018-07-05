@@ -2,3 +2,5 @@
 rootProject.name = 'kxw-spring'
 include 'kxw-spring-boot'
 include 'kxw-spring-cloud'
+include 'kxw-spring-cloud-server'
+include 'kxw-spring-cloud-client'
