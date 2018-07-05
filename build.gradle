@@ -5,6 +5,8 @@ allprojects {
     //引用的插件
     apply plugin: 'java'
     apply plugin: 'maven'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
 
     //下载jar包的仓库
     repositories {
