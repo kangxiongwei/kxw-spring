@@ -13,6 +13,13 @@ allprojects {
         mavenLocal()
         jcenter()
         mavenCentral()
+        maven { url "https://repo.spring.io/snapshot" }
+        maven { url "https://repo.spring.io/milestone" }
+    }
+
+    //公共变量
+    ext {
+        springCloudVersion = 'Finchley.RELEASE'
     }
 
     //JDK编译版本
@@ -35,8 +42,8 @@ subprojects {
 
 }
 
-//抽出几个项目的公共配置
-configure(subprojects.findAll { it.name == 'kxw-spring-boot' || it.name == 'kxw-spring-cloud' }) {
+//spring-cloud的公共配置
+configure(subprojects.findAll { it.name.startsWith("kxw-spring-cloud") }) {
 
 }
 
