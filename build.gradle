@@ -1,3 +1,14 @@
+//统一配置springboot的版本
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.0.3.RELEASE"
+    }
+}
+
 //所有项目的公共配置
 allprojects {
     group = 'org.kxw.spring'
@@ -11,10 +22,10 @@ allprojects {
     //下载jar包的仓库
     repositories {
         mavenLocal()
-        jcenter()
-        mavenCentral()
         maven { url "https://repo.spring.io/snapshot" }
         maven { url "https://repo.spring.io/milestone" }
+        mavenCentral()
+        jcenter()
     }
 
     //公共变量
@@ -43,8 +54,24 @@ subprojects {
 }
 
 //spring-cloud的公共配置
-configure(subprojects.findAll { it.name.startsWith("kxw-spring-cloud") }) {
-
+configure(subprojects.findAll { it.name.startsWith("kxw-spring-cloud") || it.name == "kxw-spring-boot" }) {
+    //引入spring-boot插件
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    //引入spring-cloud的版本依赖工具
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        }
+    }
+    //公共的依赖
+    dependencies {
+        //依赖包
+        compile("org.springframework.boot:spring-boot-starter")
+        compile("org.springframework.boot:spring-boot-starter-web")
+        //测试依赖包
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+    }
 }
 
 
