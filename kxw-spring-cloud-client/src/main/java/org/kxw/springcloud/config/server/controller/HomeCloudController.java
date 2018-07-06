@@ -1,4 +1,4 @@
-package org.kxw.springcloud.client.controller;
+package org.kxw.springcloud.config.server.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
