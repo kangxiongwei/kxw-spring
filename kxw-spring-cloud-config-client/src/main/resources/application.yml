@@ -1,8 +1,13 @@
 server:
-  port: 8763
+  port: 8881
 spring:
   application:
-    name: cloud-client
+    name: cloud-config-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8888
 eureka:
   client:
     serviceUrl:

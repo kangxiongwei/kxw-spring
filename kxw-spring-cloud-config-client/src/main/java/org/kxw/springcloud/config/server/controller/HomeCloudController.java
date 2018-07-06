@@ -9,15 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
  * Create by kangxiongwei on 2018/7/5 19:15.
  */
 @RestController
-@RequestMapping("/home")
 public class HomeCloudController {
 
-    @Value("${server.port}")
+    @Value("${foo}")
     private String port;
 
-    @RequestMapping("/cloud")
+    @RequestMapping("/hi")
     public String home(@RequestParam String name) {
-        return "Hello " + name + ", I am port " + port;
+        return "Hello " + name + ", I am foo " + port;
     }
 
 }
