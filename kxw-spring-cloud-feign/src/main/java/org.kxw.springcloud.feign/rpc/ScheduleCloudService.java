@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "CLOUD-CLIENT")
 public interface ScheduleCloudService {
 
-    @RequestMapping(value = "/home/cloud",method = RequestMethod.GET)
+    @RequestMapping(value = "/home/cloud", method = RequestMethod.GET)
     String sayHiFromClientOne(@RequestParam(value = "name") String name);
 
 
