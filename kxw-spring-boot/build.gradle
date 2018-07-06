@@ -1,5 +1,3 @@
-apply plugin: 'org.springframework.boot'
-
 jar {
     baseName = 'kxw-spring-boot'
 }
