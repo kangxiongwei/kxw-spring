@@ -8,7 +8,7 @@ spring:
       server:
         git:
           uri: https://github.com/kangxiongwei/kxw-spring
-          search-paths: /kxw-spring-cloud-config-server
+          search-paths: /kxw-spring-cloud-config-server/src/main/resources
           default-label: master
           username:
           password:

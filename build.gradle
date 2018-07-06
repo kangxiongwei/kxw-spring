@@ -1,4 +1,6 @@
 //统一配置springboot的版本
+//buildscript是gradle本身需要的资源，会在运行脚本前执行
+//其他的是项目依赖的资源
 buildscript {
     repositories {
         mavenCentral()
@@ -69,6 +71,8 @@ configure(subprojects.findAll { it.name.startsWith("kxw-spring-cloud") || it.nam
         //依赖包
         compile("org.springframework.boot:spring-boot-starter")
         compile("org.springframework.boot:spring-boot-starter-web")
+        //热部署
+        compileOnly("org.springframework.boot:spring-boot-devtools")
         //测试依赖包
         testCompile('org.springframework.boot:spring-boot-starter-test')
     }
