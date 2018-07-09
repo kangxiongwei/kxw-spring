@@ -8,6 +8,7 @@ buildscript {
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:2.0.3.RELEASE"
+        classpath "se.transmode.gradle:gradle-docker:1.2"
     }
 }
 
@@ -60,6 +61,8 @@ configure(subprojects.findAll { it.name.startsWith("kxw-spring-cloud") || it.nam
     //引入spring-boot插件
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
+    //引入docker插件
+
     //引入spring-cloud的版本依赖工具
     dependencyManagement {
         imports {
