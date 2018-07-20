@@ -2,13 +2,13 @@ package org.kxw.springcloud.config.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 /**
  * Create by kangxiongwei on 2018/7/5 14:20.
  */
 @SpringBootApplication
-@EnableDiscoveryClient
+@RefreshScope
 public class CloudConfigClientApplication {
 
     public static void main(String[] args) {

@@ -7,13 +7,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/kangxiongwei/kxw-spring
-          search-paths: /kxw-spring-cloud-config/config
+          uri: https://github.com/kangxiongwei/kxw-spring/kxw-spring-cloud-config/
+          search-paths: config
           default-label: master
-          username:
-          password:
-
-eureka:
-  client:
-    serviceUrl:
-          defaultZone: http://localhost:8761/eureka/
