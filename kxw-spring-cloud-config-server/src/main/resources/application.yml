@@ -7,6 +7,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/kangxiongwei/kxw-spring/kxw-spring-cloud-config/
-          search-paths: config
+          uri: https://github.com/kangxiongwei/kxw-spring
+          search-paths: kxw-spring-cloud-config/cloud-config-client
           default-label: master

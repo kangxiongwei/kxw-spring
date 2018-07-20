@@ -20,7 +20,7 @@ public class HomeCloudController {
 
     @GetMapping("/hello")
     public String home() {
-        return "Hello " + ", I am profile " + profile;
+        return "Hello, I am profile " + profile;
     }
 
 }

@@ -3,7 +3,13 @@ spring:
     name: cloud-config-client
   cloud:
     config:
-      uri: http://localhost:8040/
+      uri: http://localhost:8888/
       profile: dev
       label: master
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - refresh
+          - env
